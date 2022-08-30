@@ -1,0 +1,31 @@
+{
+  "name": "vite-plugin-msg-log",
+  "version": "1.0.0",
+  "description": "",
+  "main": "./dist/index.js",
+  "scripts": {
+    "build": "rimraf -rf dist && tsc"
+  },
+  "keywords": [
+    "node",
+    "vite",
+    "vite-plugin"
+  ],
+  "author": "pengboUESTC",
+  "license": "ISC",
+  "homepage": "https://github.com/PengBoUESTC/vite-plugin-msg-log.git",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PengBoUESTC/vite-plugin-msg-log.git"
+  },
+  "peerDependencies": {
+    "vite": "2.9.9"
+  },
+  "devDependencies": {
+    "@types/node": "^18.7.14",
+    "picocolors": "^1.0.0",
+    "rimraf": "^3.0.2",
+    "typescript": "^4.8.2",
+    "vite": "2.9.9"
+  }
+}
