@@ -1,5 +1,5 @@
 import { ViteDevServer, PluginOption } from 'vite';
-import colors from 'picocolors'
+import { green } from 'picocolors'
 
 export interface PluginConfig {
   envKey?: string,
@@ -20,7 +20,7 @@ export const logEnvPlugin = (configParams: PluginConfig = {}): PluginOption => {
         server.middlewares.use((req, res, next) => {
           next()
           config.logger.info(
-            colors.green(formateLogStr),
+            green(formateLogStr),
             { clear: false, timestamp: true }
           )
         })
