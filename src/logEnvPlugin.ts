@@ -28,6 +28,3 @@ export const logEnvPlugin = (configParams: PluginConfig = {}): PluginOption => {
     },
   }
 }
-
-
-
