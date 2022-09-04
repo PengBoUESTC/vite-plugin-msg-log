@@ -17,6 +17,9 @@ export const logEnvPlugin = (configParams: PluginConfig = {}): PluginOption => {
     config.logger.info(green(formateLogStr()), {
       clear: false,
       timestamp: true,
+
+
+
     });
   };
   return {
@@ -35,3 +38,5 @@ export const logEnvPlugin = (configParams: PluginConfig = {}): PluginOption => {
     },
   };
 };
+
+
