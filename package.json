@@ -12,7 +12,7 @@
     "vite-plugin"
   ],
   "lint-staged": {
-    "packages/*/{src, types}/**/*.{js,json,ts}": [
+    "src**/*.{js,json,ts}": [
       "eslint --fix",
       "prettier --write"
     ]
@@ -35,8 +35,10 @@
     "@typescript-eslint/eslint-plugin": "^5.36.0",
     "@typescript-eslint/parser": "^5.36.0",
     "eslint": "^8.23.0",
-    "lint-staged": "^13.0.3",
-    "prettier": "^2.7.1",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-prettier": "^4.0.0",
+    "lint-staged": "^10.2.10",
+    "prettier": "^2.3.1",
     "rimraf": "^3.0.2",
     "typescript": "^4.8.2",
     "vite": "2.9.9",
