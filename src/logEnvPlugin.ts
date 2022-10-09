@@ -17,14 +17,12 @@ export const logEnvPlugin = (configParams: PluginConfig = {}): PluginOption => {
     config.logger.info(green(formateLogStr()), {
       clear: false,
       timestamp: true,
-
-
-
     });
   };
   return {
     enforce: 'post',
     name: 'vite:log-env',
+    apply: 'serve',
     configureServer(server: ViteDevServer) {
       return () => {
         server.middlewares.use((req, res, next) => {
@@ -38,5 +36,3 @@ export const logEnvPlugin = (configParams: PluginConfig = {}): PluginOption => {
     },
   };
 };
-
-
