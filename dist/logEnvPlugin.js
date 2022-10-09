@@ -7,11 +7,15 @@ const logEnvPlugin = (configParams = {}) => {
     const formateLogStr = () => strGetter ? strGetter() : `current runing env: ${process.env[envKey]}`;
     const logger = (server) => {
         const { config } = server;
-        config.logger.info((0, picocolors_1.green)(formateLogStr()), { clear: false, timestamp: true });
+        config.logger.info((0, picocolors_1.green)(formateLogStr()), {
+            clear: false,
+            timestamp: true,
+        });
     };
     return {
         enforce: 'post',
         name: 'vite:log-env',
+        apply: 'serve',
         configureServer(server) {
             return () => {
                 server.middlewares.use((req, res, next) => {
@@ -22,7 +26,7 @@ const logEnvPlugin = (configParams = {}) => {
         },
         handleHotUpdate({ server }) {
             logger(server);
-        }
+        },
     };
 };
 exports.logEnvPlugin = logEnvPlugin;
